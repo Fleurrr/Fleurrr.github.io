@@ -391,6 +391,32 @@ h2 {
   font-weight: 700;
 }
 
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 13px 0 0;
+}
+
+.pub-links a {
+  padding: 5px 10px;
+  border: 1px solid rgba(23, 63, 120, 0.24);
+  border-radius: 999px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.pub-links a:hover {
+  border-color: var(--blue);
+  background: var(--blue);
+  color: #fff;
+}
+
 footer {
   display: flex;
   min-height: 180px;
