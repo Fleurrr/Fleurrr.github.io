@@ -331,29 +331,23 @@ h2 {
 
 .publication {
   display: grid;
-  grid-template-columns: 62px 232px minmax(0, 1fr);
-  gap: 16px;
-  padding: 22px 0;
-  border-top: 1px solid var(--line);
+  grid-template-columns: 58px 160px minmax(0, 1fr);
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid rgba(23, 33, 51, 0.12);
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background: rgba(255, 254, 250, 0.72);
   align-items: start;
 }
 
 .publication:last-of-type {
-  border-bottom: 1px solid var(--line);
+  margin-bottom: 0;
 }
 
 .publication.featured {
-  position: relative;
-}
-
-.publication.featured::before {
-  position: absolute;
-  top: 23px;
-  left: -14px;
-  width: 3px;
-  height: 20px;
-  background: var(--gold);
-  content: "";
+  border-left: 3px solid var(--gold);
+  padding-left: 14px;
 }
 
 .pub-year {
@@ -367,12 +361,12 @@ h2 {
   display: grid;
   width: 100%;
   aspect-ratio: 16 / 9;
-  padding: 6px;
+  padding: 4px;
   overflow: hidden;
   border: 1px solid rgba(23, 33, 51, 0.11);
-  border-radius: 5px;
+  border-radius: 4px;
   background: #fff;
-  box-shadow: 0 4px 14px rgba(23, 33, 51, 0.08);
+  box-shadow: 0 2px 8px rgba(23, 33, 51, 0.06);
   place-items: center;
   text-decoration: none;
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
@@ -387,7 +381,7 @@ h2 {
 
 .pub-teaser:hover {
   border-color: rgba(23, 63, 120, 0.32);
-  box-shadow: 0 7px 20px rgba(23, 33, 51, 0.12);
+  box-shadow: 0 4px 12px rgba(23, 33, 51, 0.1);
   transform: translateY(-1px);
 }
 
@@ -537,18 +531,10 @@ footer p {
 
 @media (max-width: 760px) {
   .publication {
-    grid-template-columns: 1fr;
-    gap: 8px;
+    grid-template-columns: 48px 140px minmax(0, 1fr);
+    gap: 10px;
   }
 
-  .pub-teaser {
-    width: min(100%, 420px);
-    margin: 3px 0 5px;
-  }
-
-  .publication.featured::before {
-    left: -12px;
-  }
 }
 
 @media (max-width: 640px) {
@@ -575,6 +561,16 @@ footer p {
 
   .section-grid {
     padding: 52px 0;
+  }
+
+  .publication {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .pub-teaser {
+    width: min(100%, 180px);
+    margin: 2px 0 4px;
   }
 
   footer {
